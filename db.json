@@ -1,0 +1,103 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "product_name": "final",
+      "weight": "final",
+      "availability": "123",
+      "url": "final",
+      "price_tier": "premium",
+      "price_range": "$1-10",
+      "unit_cost": "$10.47",
+      "isEditable": true
+    },
+    {
+      "id": 2,
+      "product_name": "gaming keyboard",
+      "weight": "500g",
+      "availability": 40,
+      "url": "https://picsum.photos/200/250",
+      "price_tier": "premium",
+      "price_range": "$50-100",
+      "unit_cost": "$55.99",
+      "isEditable": false
+    },
+    {
+      "id": 3,
+      "product_name": "custom mechanical keyboard",
+      "weight": "2.5Kg",
+      "availability": 10,
+      "url": "https://picsum.photos/200/250",
+      "price_tier": "premium",
+      "price_range": "$200+",
+      "unit_cost": "$250",
+      "isEditable": false
+    },
+    {
+      "id": 4,
+      "product_name": "gaming keyboard",
+      "weight": "500g",
+      "availability": 40,
+      "url": "https://picsum.photos/200/250",
+      "price_tier": "premium",
+      "price_range": "$50-100",
+      "unit_cost": "$55.99",
+      "isEditable": true
+    },
+    {
+      "id": 5,
+      "product_name": "custom mechanical keyboard",
+      "weight": "2.5Kg",
+      "availability": 10,
+      "url": "https://picsum.photos/200/250",
+      "price_tier": "premium",
+      "price_range": "$200+",
+      "unit_cost": "$250",
+      "isEditable": false
+    },
+    {
+      "id": 6,
+      "product_name": "gaming keyboard",
+      "weight": "500g",
+      "availability": 40,
+      "url": "https://picsum.photos/200/250",
+      "price_tier": "premium",
+      "price_range": "$50-100",
+      "unit_cost": "$55.99",
+      "isEditable": true
+    },
+    {
+      "id": 7,
+      "product_name": "yu",
+      "weight": "yu",
+      "availability": "-1",
+      "url": "yu",
+      "price_tier": "premium",
+      "price_range": "$1-10",
+      "unit_cost": "$250",
+      "isEditable": true
+    },
+    {
+      "id": 8,
+      "product_name": "test",
+      "weight": "test",
+      "availability": "12",
+      "url": "test",
+      "price_tier": "premium",
+      "price_range": "$200+",
+      "unit_cost": "$55.99",
+      "isEditable": false
+    },
+    {
+      "id": 9,
+      "product_name": "custom mechanical keyboard",
+      "weight": "2.5Kg",
+      "availability": 10,
+      "url": "https://picsum.photos/200/250",
+      "price_tier": "premium",
+      "price_range": "$200+",
+      "unit_cost": "$250",
+      "isEditable": false
+    }
+  ]
+}
