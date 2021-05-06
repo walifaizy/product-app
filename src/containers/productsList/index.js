@@ -1,10 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { getProducts } from '../../actions/productActions';
-import { Button, Input, Spinner } from '../../components/common/index';
+import { Spinner } from '../../components/common/index';
 import ItemTable from '../../components/itemTable';
-import { COLORS } from '../../constants';
 
 const Appjs = styled.div`
     text-align: center;
@@ -20,22 +19,6 @@ const Ctr = styled.div`
     color: white;
     margin: 50px 0 0 0;
     width: 90%;
-`;
-
-const SearchWraper = styled.div`
-    display: flex;
-    width: 100%;
-    .inputWrapper {
-        flex: 70%;
-    }
-`;
-
-const Hspacer = styled.div`
-    width: 20px;
-`;
-
-const Vspacer = styled.div`
-    height: ${(props) => props.height || '20px'};
 `;
 
 const SpinnerWrapper = styled.div`

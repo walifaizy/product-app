@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
-import { COLORS } from '../../constants';
 import { Button } from '../common';
 
 const ContentWrapper = styled.div`
-    background-color: ${COLORS.secondary_background};
+    background-color: ${(props) => props.theme.colors.secondary_background};
     display: flex;
+    box-shadow: ${(props) => props.theme.boxShadow.componentShadow};
     .imageWrapper {
         width: 25%;
         max-width: 120px;
@@ -14,7 +14,7 @@ const ContentWrapper = styled.div`
         top: -80px;
     }
     .tableWrapper {
-        color: ${COLORS.primary_text};
+        color: ${(props) => props.theme.colors.primary_text};
         flex: 1;
         table {
             border-collapse: collapse;
@@ -28,7 +28,7 @@ const ContentWrapper = styled.div`
             text-align: left;
         }
         tr {
-            border-bottom: 1px solid ${COLORS.border};
+            border-bottom: 1px solid ${(props) => props.theme.colors.border};
         }
         th {
             padding: 20px 15px;
@@ -83,7 +83,7 @@ const ItemTable = (props) => {
                                             <div>
                                                 <Button
                                                     onClick={() => pushToForm(item && item.id)}
-                                                    color={COLORS.blue}
+                                                    color={(props) => props.theme.colors.blue}
                                                     transparent
                                                 >
                                                     <BtnCtr>Edit</BtnCtr>

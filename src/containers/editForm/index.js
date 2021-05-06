@@ -21,7 +21,7 @@ const Ctr = styled.div`
     width: 90%;
 `;
 
-const EditForm = () => {
+const EditForm = (props) => {
     const [values, setValues] = useState({});
     const dispatch = useDispatch();
     const history = useHistory();

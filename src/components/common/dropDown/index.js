@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import enhanceWithClickOutside from 'react-click-outside';
 import { Button } from '../index';
-import { COLORS } from '../../../constants';
 
 const Container = styled.div`
     position: relative;
@@ -66,14 +65,14 @@ const BtnCtr = styled.div`
 
 const Content = styled.div`
     position: absolute;
-    background-color: ${COLORS.primary_background};
+    background-color: ${(props) => props.theme.colors.primary_background};
     height: 0;
     width: 0;
     top: calc(100% + 15px);
     right: 0;
     border-radius: 4px;
     overflow: hidden;
-    box-shadow: ${COLORS.componentShadow};
+    box-shadow: ${(props) => props.theme.boxShadow.componentShadow};
     z-index: 11;
     &.active {
         height: auto;
@@ -92,14 +91,15 @@ const List = styled.div`
     align-items: center;
     padding: 8px;
     cursor: pointer;
+    color: ${(props) => props.theme.colors.primary_text};
     .countryLabel {
         padding: 0 10px;
         font-size: 0.95rem;
     }
     &:hover,
     &.current {
-        background-color: ${COLORS.secondary_background};
-        color: ${COLORS.primary_text};
+        background-color: ${(props) => props.theme.colors.secondary_background};
+        color: ${(props) => props.theme.colors.primary_text};
     }
 `;
 
@@ -112,7 +112,7 @@ class Dropdown extends React.PureComponent {
             showList: !prevState.showList,
         }));
     };
-    selectOption = (value: string | number) => {
+    selectOption = (value) => {
         this.props.onDropdownChange(value);
         this.handleClickOutside();
     };

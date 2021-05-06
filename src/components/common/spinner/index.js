@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { COLORS } from '../../../constants';
 
 const spin = keyframes`
         0% { transform: rotate(0deg); }
@@ -9,7 +8,7 @@ const spin = keyframes`
 
 const Loader = styled.div`
     border: ${(props) => props.width} solid ${(props) => props.color};
-    border-top: ${(props) => props.width} solid ${COLORS.primary_background};
+    border-top: ${(props) => props.width} solid ${(props) => props.theme.colors.primary_background}
     border-radius: 50%;
     width: ${(props) => props.size};
     height: ${(props) => props.size};

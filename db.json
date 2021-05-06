@@ -2,10 +2,10 @@
   "products": [
     {
       "id": 1,
-      "product_name": "12",
-      "weight": "12",
-      "availability": "212",
-      "url": "12",
+      "product_name": "uy",
+      "weight": "uy",
+      "availability": "12",
+      "url": "uy",
       "price_tier": "budget",
       "price_range": "$50-99",
       "unit_cost": "$10.47",
@@ -57,12 +57,12 @@
     },
     {
       "id": 6,
-      "product_name": "test",
-      "weight": "test",
+      "product_name": "12",
+      "weight": "12",
       "availability": "12",
-      "url": "test",
+      "url": "12",
       "price_tier": "budget",
-      "price_range": "$50-99",
+      "price_range": "$1-10",
       "unit_cost": "$55.99",
       "isEditable": true
     },

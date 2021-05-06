@@ -1,6 +1,5 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import { COLORS } from '../../../constants';
+import styled from 'styled-components';
 
 const Container = styled.div`
     position: relative;
@@ -8,30 +7,18 @@ const Container = styled.div`
     align-items: stretch;
     input {
         padding: 0px 8px;
-        border: 1px solid rgb(187, 187, 187);
+        border: 1px solid ${(props) => props.theme.colors.inputBorder};
         border-radius: 4px;
         width: 100%;
         font-size: 1rem;
         height: 56px;
         box-sizing: border-box;
-        background: ${COLORS.secondary_background};
-        color: ${COLORS.primary_text};
-    }
-    &.inputError {
-        input {
-            border-color: rgb(171, 19, 10);
-        }
+        background: ${(props) => props.theme.colors.secondary_background};
+        color: ${(props) => props.theme.colors.primary_text};
     }
 `;
 
 const Wrapper = styled.div``;
-
-const Error = styled.div`
-    font-size: 0.8rem;
-    line-height: 1.5;
-    margin-top: 8px;
-    color: rgb(171, 19, 10);
-`;
 
 class Input extends React.PureComponent {
     state = {
@@ -51,7 +38,6 @@ class Input extends React.PureComponent {
                 <Container className={`${error ? 'inputError' : ''}`}>
                     <input type={type} {...rest} value={value} onChange={this.onChange} placeholder={placeholder} />
                 </Container>
-                {error && <Error>{error}</Error>}
             </Wrapper>
         );
     }

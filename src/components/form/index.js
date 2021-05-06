@@ -1,15 +1,15 @@
-import React, { Component, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { COLORS } from '../../constants';
 import { Input, Button, Dropdown, Spinner } from '../common';
 import { device } from '../../theme/globalStyles';
 
 const Ctr = styled.div`
     box-sizing: border-box;
-    background-color: ${COLORS.secondary_background};
+    background-color: ${(props) => props.theme.colors.secondary_background};
     border-radius: 4px;
     width: 100%;
     margin-bottom: 20px;
+    box-shadow: ${(props) => props.theme.boxShadow.componentShadow};
 `;
 
 const InputFormCtr = styled.div`
@@ -47,13 +47,13 @@ const InputCtr = styled.div`
         font-weight: 500;
         line-height: 1.5;
         font-size: 0.9rem;
-        color: ${COLORS.primary_text};
+        color: ${(props) => props.theme.colors.primary_text};
     }
     .inputInfo {
         font-size: 0.8rem;
         line-height: 1.5;
         margin-top: 8px;
-        color: ${COLORS.primary_text};
+        color: ${(props) => props.theme.colors.primary_text};
     }
     &.desktopLocationCtr {
         display: none;
@@ -117,13 +117,13 @@ const CheckWrapper = styled.div`
         left: 0;
         height: 25px;
         width: 25px;
-        background-color: ${COLORS.primary_background};
-        border: 1px solid ${COLORS.blue};
+        background-color: ${(props) => props.theme.colors.primary_background};
+        border: 1px solid ${(props) => props.theme.colors.blue};
     }
 
     /* When the checkbox is checked, add a blue background */
     .container input:checked ~ .checkmark {
-        background-color: ${COLORS.blue};
+        background-color: ${(props) => props.theme.colors.blue};
     }
 
     /* Create the checkmark/indicator (hidden when not checked) */
@@ -162,6 +162,7 @@ const RadioWrapper = styled.div`
         cursor: pointer;
         font-size: 22px;
         user-select: none;
+        color: ${(props) => props.theme.colors.primary_text};
     }
 
     /* Hide the browser's default radio button */
@@ -180,14 +181,14 @@ const RadioWrapper = styled.div`
         left: 0;
         height: 25px;
         width: 25px;
-        background-color: ${COLORS.primary_background};
+        background-color: ${(props) => props.theme.colors.primary_background};
         border-radius: 50%;
-        border: 1px solid ${COLORS.blue};
+        border: 1px solid ${(props) => props.theme.colors.blue};
     }
 
     /* When the radio button is checked, add a blue background */
     .container input:checked ~ .checkmark {
-        background-color: ${COLORS.blue};
+        background-color: ${(props) => props.theme.colors.blue};
     }
 
     /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -225,7 +226,7 @@ const IconWrapper = styled.div`
     margin: 0 0 15px 0;
     display: flex;
     cursor: pointer;
-    color: ${COLORS.blue};
+    color: ${(props) => props.theme.colors.blue};
     .gg-chevron-left {
         box-sizing: border-box;
         position: relative;
@@ -348,7 +349,7 @@ const Form = (props) => {
                                     clearWidth
                                     value={values['price_range']}
                                     transparent
-                                    color={COLORS.blue}
+                                    color={(props) => props.theme.colors.blue}
                                     placeholder={'Select Price Range'}
                                     options={options}
                                     onDropdownChange={(val) => onDropdownChange('price_range', val)}
@@ -396,7 +397,12 @@ const Form = (props) => {
                     </InputFlexer>
                 </InputFormCtr>
                 <BtnCtr>
-                    <Button disabled={disabled} color={COLORS.blue} transparent onClick={postForm}>
+                    <Button
+                        disabled={disabled}
+                        color={(props) => props.theme.colors.blue}
+                        transparent
+                        onClick={postForm}
+                    >
                         <BtnText>{isPosting ? <Spinner size={'10px'} /> : 'Submit'}</BtnText>
                     </Button>
                 </BtnCtr>
