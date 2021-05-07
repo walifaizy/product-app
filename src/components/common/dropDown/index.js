@@ -32,7 +32,6 @@ const BtnCtr = styled.div`
         transform: rotate(90deg);
         &.openedChevron {
             transform: rotate(-90deg);
-            transition: transform 150ms ease;
         }
     }
     .noTransform {

@@ -2,10 +2,10 @@
   "products": [
     {
       "id": 1,
-      "product_name": "uy",
-      "weight": "uy",
-      "availability": "12",
-      "url": "uy",
+      "product_name": "test_Edit",
+      "weight": "123",
+      "availability": "1",
+      "url": "123",
       "price_tier": "budget",
       "price_range": "$50-99",
       "unit_cost": "$10.47",
