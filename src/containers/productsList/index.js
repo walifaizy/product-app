@@ -42,7 +42,7 @@ const ProductList = () => {
             <Ctr>
                 {isLoading ? (
                     <SpinnerWrapper>
-                        <Spinner size={'30px'} width={'7px'} />
+                        <Spinner size={30} width={7} />
                     </SpinnerWrapper>
                 ) : (
                     <ItemTable products={products} />

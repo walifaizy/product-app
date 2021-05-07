@@ -7,11 +7,11 @@ const spin = keyframes`
     `;
 
 const Loader = styled.div`
-    border: ${(props) => props.width} solid ${(props) => props.color};
-    border-top: ${(props) => props.width} solid ${(props) => props.theme.colors.primary_background}
+    border: 2px solid ${(props) => props.color};
+    border-top: 2px solid ${(props) => props.theme.colors.primary_background};
     border-radius: 50%;
-    width: ${(props) => props.size};
-    height: ${(props) => props.size};
+    width: ${(props) => props.size}px;
+    height: ${(props) => props.size}px;
     animation: ${spin} 0.7s linear infinite;
 `;
 

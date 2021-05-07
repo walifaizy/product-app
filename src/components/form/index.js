@@ -279,7 +279,7 @@ const Form = (props) => {
                         transparent
                         onClick={postForm}
                     >
-                        <BtnText>{isPosting ? <Spinner size={'10px'} /> : 'Submit'}</BtnText>
+                        <BtnText>{isPosting ? <Spinner size={10} /> : 'Submit'}</BtnText>
                     </Button>
                 </BtnCtr>
             </Ctr>
